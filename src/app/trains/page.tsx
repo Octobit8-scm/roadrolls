@@ -153,6 +153,10 @@ export default function TrainsPage() {
                   alt={train.name}
                   fill
                   className="object-cover"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = '/images/placeholder-train.svg';
+                  }}
                 />
               </div>
               <div className="p-6">

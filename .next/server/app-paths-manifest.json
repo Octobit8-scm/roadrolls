@@ -1,11 +1,13 @@
 {
+  "/_not-found": "app/_not-found.js",
   "/hotels/page": "app/hotels/page.js",
-  "/flights/page": "app/flights/page.js",
   "/accessories/page": "app/accessories/page.js",
-  "/packages/[id]/page": "app/packages/[id]/page.js",
+  "/buses/page": "app/buses/page.js",
+  "/flights/page": "app/flights/page.js",
+  "/cars/page": "app/cars/page.js",
   "/packages/page": "app/packages/page.js",
-  "/page": "app/page.js",
-  "/planner/page": "app/planner/page.js",
+  "/packages/[id]/page": "app/packages/[id]/page.js",
   "/trains/page": "app/trains/page.js",
-  "/buses/page": "app/buses/page.js"
+  "/page": "app/page.js",
+  "/planner/page": "app/planner/page.js"
 }

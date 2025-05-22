@@ -54,6 +54,7 @@ export default function CarsPage() {
           alt="Car Rental"
           fill
           className="object-cover"
+          priority
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white">
@@ -168,6 +169,10 @@ export default function CarsPage() {
                   alt={car.name}
                   fill
                   className="object-cover"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = '/images/placeholder-car.svg';
+                  }}
                 />
               </div>
               <div className="p-6">

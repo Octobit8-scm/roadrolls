@@ -152,6 +152,10 @@ export default function BusesPage() {
                   alt={bus.name}
                   fill
                   className="object-cover"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = '/images/placeholder-bus.svg';
+                  }}
                 />
               </div>
               <div className="p-6">

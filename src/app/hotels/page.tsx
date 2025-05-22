@@ -3,8 +3,8 @@
 import { useState } from 'react'
 import SearchForm from '@/components/SearchForm'
 import Image from 'next/image'
-import { StarIcon, WifiIcon, SparklesIcon } from '@heroicons/react/24/solid'
-import { BeakerIcon, BuildingOfficeIcon } from '@heroicons/react/24/outline'
+import { StarIcon } from '@heroicons/react/24/solid'
+import { WifiIcon, SparklesIcon, BeakerIcon, BuildingOfficeIcon } from '@heroicons/react/24/outline'
 
 interface Hotel {
   id: number
@@ -40,7 +40,7 @@ export default function HotelsPage() {
         rating: 4.8,
         price: 8500,
         amenities: ['Free WiFi', 'Swimming Pool', 'Spa', 'Fine Dining'],
-        image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg',
+        image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945',
         description: 'Luxury 5-star hotel with stunning city views and world-class amenities',
         reviews: 1245,
         type: 'Luxury'
@@ -52,7 +52,7 @@ export default function HotelsPage() {
         rating: 4.6,
         price: 6500,
         amenities: ['Beach Access', 'Free WiFi', 'Spa', 'Water Sports'],
-        image: 'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg',
+        image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4',
         description: 'Beachfront resort offering a perfect blend of luxury and natural beauty',
         reviews: 892,
         type: 'Resort'
@@ -64,7 +64,7 @@ export default function HotelsPage() {
         rating: 4.4,
         price: 4500,
         amenities: ['Business Center', 'Free WiFi', 'Gym', 'Conference Rooms'],
-        image: 'https://images.pexels.com/photos/271619/pexels-photo-271619.jpeg',
+        image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945',
         description: 'Modern business hotel in the heart of the city',
         reviews: 567,
         type: 'Business'
@@ -76,7 +76,7 @@ export default function HotelsPage() {
         rating: 4.7,
         price: 5500,
         amenities: ['Historic Tours', 'Garden', 'Library', 'Art Gallery'],
-        image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg',
+        image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4',
         description: 'Charming boutique hotel in a historic building',
         reviews: 423,
         type: 'Boutique'
@@ -108,7 +108,7 @@ export default function HotelsPage() {
       <section className="relative h-[400px] bg-gray-900">
         <div className="absolute inset-0">
           <Image
-            src="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg"
+            src="https://images.unsplash.com/photo-1566073771259-6a8506099945"
             alt="Luxury hotel"
             fill
             className="object-cover opacity-50"
@@ -185,6 +185,10 @@ export default function HotelsPage() {
                       alt={hotel.name}
                       fill
                       className="object-cover"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = '/images/placeholder-hotel.svg';
+                      }}
                     />
                     <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-medium text-primary">
                       {hotel.type}

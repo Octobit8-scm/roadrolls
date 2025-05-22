@@ -132,7 +132,7 @@ export default function FlightsPage() {
       <section className="relative h-[300px] bg-gray-900">
         <div className="absolute inset-0">
           <Image
-            src="https://images.pexels.com/photos/46148/aircraft-jet-landing-cloud-46148.jpeg"
+            src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05"
             alt="Airplane in sky"
             fill
             className="object-cover opacity-50"
@@ -226,7 +226,7 @@ export default function FlightsPage() {
                             className="object-contain"
                             onError={(e) => {
                               const target = e.target as HTMLImageElement;
-                              target.src = '/images/placeholder-airline.png';
+                              target.src = '/images/placeholder-airline.svg';
                             }}
                           />
                         </div>

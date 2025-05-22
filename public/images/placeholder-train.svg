@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#F3F4F6"/>
+  <rect x="50" y="200" width="700" height="200" rx="10" fill="#9CA3AF"/>
+  <rect x="100" y="150" width="600" height="100" rx="10" fill="#9CA3AF"/>
+  <circle cx="150" cy="400" r="30" fill="#6B7280"/>
+  <circle cx="650" cy="400" r="30" fill="#6B7280"/>
+  <text x="400" y="300" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="24" fill="#6B7280">Train Image</text>
+</svg> 

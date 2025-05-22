@@ -134,7 +134,7 @@ const packages = [
 
 export default function PackagesPage() {
   const [selectedCountry, setSelectedCountry] = useState<string>('All Countries')
-  const countries = ['All Countries', ...new Set(packages.map(pkg => pkg.country))]
+  const countries = ['All Countries', ...Array.from(new Set(packages.map(pkg => pkg.country)))]
 
   const filteredPackages = selectedCountry === 'All Countries'
     ? packages

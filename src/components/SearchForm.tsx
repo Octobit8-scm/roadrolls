@@ -77,7 +77,7 @@ const SearchForm = ({ type, onSubmit }: SearchFormProps) => {
           </label>
           <DatePicker
             selected={startDate}
-            onChange={(date) => setStartDate(date)}
+            onChange={(date: Date | null) => setStartDate(date)}
             className="input-field"
             placeholderText="Select date"
             minDate={new Date()}
@@ -91,7 +91,7 @@ const SearchForm = ({ type, onSubmit }: SearchFormProps) => {
           </label>
           <DatePicker
             selected={endDate}
-            onChange={(date) => setEndDate(date)}
+            onChange={(date: Date | null) => setEndDate(date)}
             className="input-field"
             placeholderText="Select date"
             minDate={startDate || new Date()}
