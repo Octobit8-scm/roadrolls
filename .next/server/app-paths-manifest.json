@@ -1,0 +1,11 @@
+{
+  "/hotels/page": "app/hotels/page.js",
+  "/flights/page": "app/flights/page.js",
+  "/accessories/page": "app/accessories/page.js",
+  "/packages/[id]/page": "app/packages/[id]/page.js",
+  "/packages/page": "app/packages/page.js",
+  "/page": "app/page.js",
+  "/planner/page": "app/planner/page.js",
+  "/trains/page": "app/trains/page.js",
+  "/buses/page": "app/buses/page.js"
+}
