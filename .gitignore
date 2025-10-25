@@ -7,7 +7,7 @@ package-lock.json
 yarn.lock
 
 # Production builds
-build/
+# build/  # Commented out for Azure Static Web Apps deployment
 dist/
 out/
 
