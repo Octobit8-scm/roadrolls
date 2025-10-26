@@ -1367,29 +1367,41 @@ const HeroSection = () => {
         {/* Background with sunlight effect */}
         <div className="absolute inset-0 z-0">
           {/* Base gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700"></div>
           
-          {/* Sunlight effect from top-right corner */}
+          {/* Sunlight effect from top-right corner - enhanced visibility */}
           <div 
             className="absolute inset-0"
             style={{
-              background: 'radial-gradient(circle at top right, rgba(255, 255, 255, 0.15) 0%, rgba(255, 242, 204, 0.1) 20%, rgba(255, 229, 153, 0.05) 30%, transparent 50%)',
-              backgroundSize: '100% 100%',
+              background: 'radial-gradient(circle at top right, rgba(255, 255, 255, 0.4) 0%, rgba(255, 242, 204, 0.3) 10%, rgba(255, 229, 153, 0.2) 20%, rgba(255, 207, 0, 0.15) 30%, rgba(255, 193, 7, 0.08) 40%, transparent 60%)',
+              backgroundSize: '120% 120%',
               pointerEvents: 'none'
             }}
           ></div>
           
-          {/* Secondary sunlight layer for more depth */}
+          {/* Secondary sunlight layer for more depth - enhanced */}
           <div 
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(135deg, transparent 0%, rgba(255, 248, 220, 0.08) 15%, transparent 30%)',
+              background: 'linear-gradient(135deg, transparent 0%, rgba(255, 248, 220, 0.2) 10%, rgba(255, 235, 59, 0.15) 20%, rgba(255, 207, 0, 0.1) 30%, transparent 40%)',
               pointerEvents: 'none'
             }}
           ></div>
           
-          {/* Overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-black/50"></div>
+          {/* Additional radial light rays for more dramatic effect */}
+          <div 
+            className="absolute inset-0"
+            style={{
+              background: 'radial-gradient(ellipse at top right, rgba(255, 255, 255, 0.25) 0%, transparent 50%)',
+              backgroundSize: '80% 80%',
+              pointerEvents: 'none',
+              transform: 'rotate(-10deg)',
+              transformOrigin: 'top right'
+            }}
+          ></div>
+          
+          {/* Reduced overlay for better sunlight visibility */}
+          <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-black/10 to-black/30"></div>
         </div>
 
       {/* Content */}
