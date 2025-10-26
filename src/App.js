@@ -1367,9 +1367,9 @@ const HeroSection = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <div 
-            className="w-full h-full bg-cover bg-center bg-no-repeat bg-slate-800"
+            className="w-full h-full bg-cover bg-center bg-no-repeat bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900"
             style={{
-              backgroundImage: `url('./public/Home-hero-section.png')`,
+              backgroundImage: `url('/Home-hero-section.png')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat'

@@ -43,5 +43,11 @@ filesToCopy.forEach(file => {
   }
 });
 
+// Copy hero image to root of build directory for proper serving
+if (fs.existsSync('public/Home-hero-section.png')) {
+  fs.copyFileSync('public/Home-hero-section.png', path.join(buildDir, 'Home-hero-section.png'));
+  console.log('Hero image copied to build root directory.');
+}
+
 console.log('Build completed successfully!');
 console.log('Files copied to build directory.');
