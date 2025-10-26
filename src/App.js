@@ -80,12 +80,48 @@ const { useState, useEffect, createContext, useContext } = React;
   const Gift = createIcon("M20 12v10H4V12M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z");
   const Trash2 = createIcon("M3 6h18M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2");
   const CheckCircle = createIcon("M22 11.08V12a10 10 0 1 1-5.93-9.14");
-
+  const Clock = createIcon("M21 12a9 9 0 1 1-6.219-8.56");
+  const CreditCard = createIcon("M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3z");
+  const Send = createIcon("m22 2-7 20-4-9-9-4Z");
+  const Bot = createIcon("M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 6L12 11l-3.5-3L8 10l4 4 5-5-1.5-1z");
+  const MessageCircle = createIcon("M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z");
+  const DollarSign = createIcon("M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6");
+  const Filter = createIcon("M22 3H2l8 9.46V19l4 2v-8.54L22 3z");
+  const Truck = createIcon("M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2");
+  const Package = createIcon("M16.5 9.4L7.5 4.21M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z");
+  const ShoppingBag = createIcon("M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18m-7 7a4 4 0 1 1-8 0");
+  const Tag = createIcon("M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.586 8.586a2 2 0 0 0 2.828 0l7.172-7.172a2 2 0 0 0 0-2.828z");
+  const Recycle = createIcon("M18.42 9.21a2 2 0 1 1-4 2.59 2 2 0 0 1 4-2.59zM12 11h7a2 2 0 0 1 2 2v1.5a2 2 0 0 1-.4 1.2l-1.5 2a2 2 0 0 1-1.6.8H8.1a2 2 0 0 1-.9-.2l-1.5-1a2 2 0 0 1-.6-.8V13a2 2 0 0 1 2-2h4z");
+  const TreePine = createIcon("m17 8 4 4H3m4-4v14m6-10v2");
+  const Waves = createIcon("M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z");
+  const Award = createIcon("M12 15l8-4V9L12 5 4 9v2l8 4zM8 9l4-2 4 2M8 13l4 2 4-2");
+  const TrendingUp = createIcon("m22 7-8.5-8.5L9.5 8 3 1.5M22 7v6h-6");
+  const Target = createIcon("M22 12A10 10 0 1 1 12 2a10 10 0 0 1 10 10z");
+  const Leaf = createIcon("M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z");
+  const Mail = createIcon("M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z");
+  const Lock = createIcon("M18 11h-1a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2zM10 11V7a6 6 0 1 1 12 0v4m-6 0v4m6-4v6m-6-4h-2m0 0v8");
+  const Phone = createIcon("M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z");
+  const Eye = createIcon("M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z");
+  const EyeOff = createIcon("M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24M1 1l22 22");
+  
+  // Make icons globally available for components
+  window.AppIcons = {
+    Search, User, Heart, ShoppingCart, Menu, X, MapPin, Calendar, Users, Star, 
+    ChevronDown, Globe, Shield, Headphones, Sparkles, Plane, Car, Train, Bus, 
+    Mountain, Bike, Hotel, Utensils, Camera, Gift, Trash2, CheckCircle, Clock, 
+    CreditCard, Send, Bot, MessageCircle, DollarSign, Filter, Truck, Package, 
+    ShoppingBag, Tag, Recycle, TreePine, Waves, Award, TrendingUp, Target, Leaf,
+    Mail, Lock, Phone, Eye, EyeOff
+  };
+  
   // Import components (will be available after they load)
   let AuthModal, BookingModal, Marketplace, CleanlinessDrive, AIChatbot;
 
 // Context for global state management
 const AppContext = createContext();
+
+// Make AppContext globally available for components
+window.AppContext = AppContext;
 
 // Mock data for Indian tourist destinations
 const mockPackages = [
@@ -1192,7 +1228,7 @@ const mockPackages = [
 
 // Header Component
 const Header = () => {
-  const { user, setUser, cart, favorites } = useContext(AppContext);
+  const { user, setUser, cart, favorites } = useContext(window.AppContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
@@ -1364,55 +1400,19 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background with sunlight effect */}
-        <div className="absolute inset-0 z-0">
-          {/* Base gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700"></div>
-          
-          {/* Main sunlight rays from top-right corner - using conic gradient */}
-          <div 
-            className="absolute inset-0"
-            style={{
-              background: 'conic-gradient(from 135deg at top right, transparent 0deg, rgba(255, 255, 255, 0.3) 10deg, rgba(255, 242, 204, 0.25) 20deg, rgba(255, 229, 153, 0.2) 40deg, rgba(255, 207, 0, 0.15) 50deg, rgba(255, 193, 7, 0.1) 60deg, transparent 70deg)',
-              backgroundSize: '200% 200%',
-              backgroundPosition: '0% 0%',
-              pointerEvents: 'none'
-            }}
-          ></div>
-          
-          {/* Secondary sun ray layer - diagonal rays */}
-          <div 
-            className="absolute inset-0"
-            style={{
-              background: 'repeating-linear-gradient(125deg, transparent 0%, rgba(255, 248, 220, 0.25) 5%, transparent 10%)',
-              backgroundSize: '200px 200px',
-              pointerEvents: 'none'
-            }}
-          ></div>
-          
-          {/* Central bright sun burst */}
-          <div 
-            className="absolute top-0 right-0 w-64 h-64"
-            style={{
-              background: 'radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 242, 204, 0.3) 20%, transparent 50%)',
-              filter: 'blur(2px)',
-              pointerEvents: 'none',
-              clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 0)'
-            }}
-          ></div>
-          
-          {/* Sunlight rays effect using linear gradients */}
-          <div 
-            className="absolute inset-0"
-            style={{
-              background: 'linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.2) 10%, rgba(255, 235, 59, 0.15) 20%, rgba(255, 207, 0, 0.1) 40%, transparent 60%)',
-              pointerEvents: 'none'
-            }}
-          ></div>
-          
-          {/* Reduced overlay for better sunlight visibility */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-black/10 to-black/30"></div>
-        </div>
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/hero-image.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      ></div>
+      
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-black/60 via-black/40 to-black/70"></div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1527,7 +1527,7 @@ const PackageCard = ({ pkg, onAddToFavorites, onAddToCart, onViewDetails, isFavo
 
 // Package Selection Component
 const PackageSelection = ({ onViewDetails }) => {
-  const { addToFavorites, addToCart, favorites, cart } = useContext(AppContext);
+  const { addToFavorites, addToCart, favorites, cart } = useContext(window.AppContext);
   const [packages, setPackages] = useState(mockPackages);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -3158,7 +3158,7 @@ const Footer = () => {
 
   // Favorites Page Component
   const FavoritesPage = () => {
-    const { favorites, addToFavorites } = useContext(AppContext);
+    const { favorites, addToFavorites } = useContext(window.AppContext);
     const favoritePackages = mockPackages.filter(pkg => favorites.includes(pkg.id));
 
     return (
@@ -3208,7 +3208,7 @@ const Footer = () => {
 
   // Cart Page Component
   const CartPage = () => {
-    const { cart, addToCart } = useContext(AppContext);
+    const { cart, addToCart } = useContext(window.AppContext);
     const [quantities, setQuantities] = useState({});
 
     const updateQuantity = (id, quantity) => {
@@ -3336,7 +3336,7 @@ const Footer = () => {
 
   // Profile Page Component
   const ProfilePage = () => {
-    const { user, setUser } = useContext(AppContext);
+    const { user, setUser } = useContext(window.AppContext);
     const [activeTab, setActiveTab] = useState('profile');
 
     if (!user) {
@@ -3515,7 +3515,7 @@ const Footer = () => {
 
   // Bookings Page Component
   const BookingsPage = () => {
-    const { user } = useContext(AppContext);
+    const { user } = useContext(window.AppContext);
 
     if (!user) {
       return (
@@ -3565,7 +3565,7 @@ const Footer = () => {
 
 // Category Offerings Component for Home Page
 const CategoryOfferings = () => {
-  const { addToFavorites, addToCart, favorites, cart, navigate } = useContext(AppContext);
+  const { addToFavorites, addToCart, favorites, cart, navigate } = useContext(window.AppContext);
 
   const categoryOfferings = {
     "Luxury Travel": {
@@ -3869,7 +3869,7 @@ const CategoryOfferings = () => {
 
 // Category Page Component
 const CategoryPage = ({ category, onViewDetails }) => {
-  const { addToFavorites, addToCart, favorites, cart } = useContext(AppContext);
+  const { addToFavorites, addToCart, favorites, cart } = useContext(window.AppContext);
   const [searchQuery, setSearchQuery] = useState("");
   
   // Filter packages by category
@@ -4149,7 +4149,7 @@ const CategoryPage = ({ category, onViewDetails }) => {
 // Package Detail Page Component
 const PackageDetailPage = ({ packageId, onBack }) => {
   const packageData = mockPackages.find(pkg => pkg.id === packageId);
-  const { addToFavorites, addToCart, favorites, cart } = useContext(AppContext);
+  const { addToFavorites, addToCart, favorites, cart } = useContext(window.AppContext);
   
   if (!packageData) {
     return (

@@ -1,9 +1,9 @@
 const { useState, useEffect } = React;
 const { motion, AnimatePresence } = Motion;
-const { X, Calendar, Users, CreditCard, MapPin, Clock, CheckCircle, Plane, Hotel, Car } = LucideReact;
+const { X, Calendar, Users, CreditCard, MapPin, Clock, CheckCircle, Plane, Hotel, Car } = window.AppIcons || {};
 
 const BookingModal = ({ isOpen, onClose, package: pkg }) => {
-  const { user, addToCart } = React.useContext(AppContext);
+  const { user, addToCart } = React.useContext(window.AppContext);
   const [step, setStep] = useState(1);
   const [bookingData, setBookingData] = useState({
     travelers: 1,

@@ -1,9 +1,9 @@
 const { useState } = React;
 const { motion, AnimatePresence } = Motion;
-const { X, Mail, Lock, User, Phone, Eye, EyeOff, CheckCircle } = LucideReact;
+const { X, Mail, Lock, User, Phone, Eye, EyeOff, CheckCircle } = window.AppIcons || {};
 
 const AuthModal = ({ isOpen, onClose, mode = 'login' }) => {
-  const { setUser } = React.useContext(AppContext);
+  const { setUser } = React.useContext(window.AppContext);
   const [authMode, setAuthMode] = useState(mode);
   const [formData, setFormData] = useState({
     email: '',

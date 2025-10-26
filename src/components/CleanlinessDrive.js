@@ -18,10 +18,10 @@ const {
   TrendingUp,
   Target,
   Globe
-} = LucideReact;
+} = window.AppIcons || {};
 
 const CleanlinessDrive = () => {
-  const { user } = React.useContext(AppContext);
+  const { user } = React.useContext(window.AppContext);
   const [activeTab, setActiveTab] = useState('donate');
   const [donationAmount, setDonationAmount] = useState(0);
   const [selectedDrive, setSelectedDrive] = useState(null);

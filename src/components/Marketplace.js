@@ -13,10 +13,10 @@ const {
   ShoppingBag,
   Tag,
   Clock
-} = LucideReact;
+} = window.AppIcons || {};
 
 const Marketplace = () => {
-  const { addToCart, favorites, addToFavorites } = React.useContext(AppContext);
+  const { addToCart, favorites, addToFavorites } = React.useContext(window.AppContext);
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');

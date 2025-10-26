@@ -121,10 +121,24 @@ function copyFiles() {
 
 // Copy hero image to root for proper serving
 function copyHeroImage() {
-  const heroImagePath = 'public/Home-hero-section.png';
-  const destPath = path.join(buildDir, 'Home-hero-section.png');
+  // Try to find any image file in the public folder
+  const publicPath = 'public';
+  let heroImagePath = null;
+  const destPath = path.join(buildDir, 'hero-image.jpg');
   
-  if (fs.existsSync(heroImagePath)) {
+  if (fs.existsSync(publicPath)) {
+    const files = fs.readdirSync(publicPath);
+    const imageFiles = files.filter(file => {
+      const ext = path.extname(file).toLowerCase();
+      return ['.png', '.jpg', '.jpeg', '.gif'].includes(ext);
+    });
+    
+    if (imageFiles.length > 0) {
+      heroImagePath = path.join(publicPath, imageFiles[0]);
+    }
+  }
+  
+  if (heroImagePath && fs.existsSync(heroImagePath)) {
     try {
       fs.copyFileSync(heroImagePath, destPath);
       logSuccess('Hero image copied to build root directory');
@@ -134,7 +148,7 @@ function copyHeroImage() {
       return false;
     }
   } else {
-    logWarning('Hero image not found in public folder');
+    logWarning('No image file found in public folder');
     return false;
   }
 }

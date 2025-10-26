@@ -17,7 +17,7 @@ const {
   Star,
   Heart,
   Clock
-} = LucideReact;
+} = window.AppIcons || {};
 
 const AIChatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
