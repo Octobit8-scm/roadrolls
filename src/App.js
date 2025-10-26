@@ -1369,34 +1369,44 @@ const HeroSection = () => {
           {/* Base gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700"></div>
           
-          {/* Sunlight effect from top-right corner - enhanced visibility */}
+          {/* Main sunlight rays from top-right corner - using conic gradient */}
           <div 
             className="absolute inset-0"
             style={{
-              background: 'radial-gradient(circle at top right, rgba(255, 255, 255, 0.4) 0%, rgba(255, 242, 204, 0.3) 10%, rgba(255, 229, 153, 0.2) 20%, rgba(255, 207, 0, 0.15) 30%, rgba(255, 193, 7, 0.08) 40%, transparent 60%)',
-              backgroundSize: '120% 120%',
+              background: 'conic-gradient(from 135deg at top right, transparent 0deg, rgba(255, 255, 255, 0.3) 10deg, rgba(255, 242, 204, 0.25) 20deg, rgba(255, 229, 153, 0.2) 40deg, rgba(255, 207, 0, 0.15) 50deg, rgba(255, 193, 7, 0.1) 60deg, transparent 70deg)',
+              backgroundSize: '200% 200%',
+              backgroundPosition: '0% 0%',
               pointerEvents: 'none'
             }}
           ></div>
           
-          {/* Secondary sunlight layer for more depth - enhanced */}
+          {/* Secondary sun ray layer - diagonal rays */}
           <div 
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(135deg, transparent 0%, rgba(255, 248, 220, 0.2) 10%, rgba(255, 235, 59, 0.15) 20%, rgba(255, 207, 0, 0.1) 30%, transparent 40%)',
+              background: 'repeating-linear-gradient(125deg, transparent 0%, rgba(255, 248, 220, 0.25) 5%, transparent 10%)',
+              backgroundSize: '200px 200px',
               pointerEvents: 'none'
             }}
           ></div>
           
-          {/* Additional radial light rays for more dramatic effect */}
+          {/* Central bright sun burst */}
           <div 
-            className="absolute inset-0"
+            className="absolute top-0 right-0 w-64 h-64"
             style={{
-              background: 'radial-gradient(ellipse at top right, rgba(255, 255, 255, 0.25) 0%, transparent 50%)',
-              backgroundSize: '80% 80%',
+              background: 'radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 242, 204, 0.3) 20%, transparent 50%)',
+              filter: 'blur(2px)',
               pointerEvents: 'none',
-              transform: 'rotate(-10deg)',
-              transformOrigin: 'top right'
+              clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 0)'
+            }}
+          ></div>
+          
+          {/* Sunlight rays effect using linear gradients */}
+          <div 
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.2) 10%, rgba(255, 235, 59, 0.15) 20%, rgba(255, 207, 0, 0.1) 40%, transparent 60%)',
+              pointerEvents: 'none'
             }}
           ></div>
           
