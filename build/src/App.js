@@ -1381,7 +1381,13 @@ const HeroSection = () => {
               onError={(e) => {
                 console.log('Hero background image failed to load:', e);
                 console.log('Attempted to load:', e.target.src);
-                setImageError(true);
+                console.log('Falling back to external image...');
+                // Try external image as fallback
+                e.target.src = 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80';
+                e.target.onerror = () => {
+                  console.log('External image also failed, using gradient only');
+                  setImageError(true);
+                };
               }}
               style={{
                 minHeight: '100vh',
@@ -1392,6 +1398,26 @@ const HeroSection = () => {
           )}
           {/* Fallback gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900"></div>
+          
+          {/* Sunlight effect from top-right corner */}
+          <div 
+            className="absolute inset-0"
+            style={{
+              background: 'radial-gradient(circle at top right, rgba(255, 255, 255, 0.15) 0%, rgba(255, 242, 204, 0.1) 20%, rgba(255, 229, 153, 0.05) 30%, transparent 50%)',
+              backgroundSize: '100% 100%',
+              pointerEvents: 'none'
+            }}
+          ></div>
+          
+          {/* Secondary sunlight layer for more depth */}
+          <div 
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(135deg, transparent 0%, rgba(255, 248, 220, 0.08) 15%, transparent 30%)',
+              pointerEvents: 'none'
+            }}
+          ></div>
+          
           {/* Overlay for text readability */}
           <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-black/50"></div>
         </div>
