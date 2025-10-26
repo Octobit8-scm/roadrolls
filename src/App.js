@@ -1367,15 +1367,13 @@ const HeroSection = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <div 
-            className="w-full h-full bg-cover bg-center bg-no-repeat bg-slate-800"
+            className="w-full h-full bg-cover bg-center bg-no-repeat bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900"
             style={{
-              backgroundImage: `url('./public/Home-hero-section.png')`,
+              backgroundImage: `url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat'
             }}
-            onLoad={() => console.log('Hero background image loaded successfully')}
-            onError={() => console.log('Hero background image failed to load')}
           ></div>
           {/* Overlay for text readability */}
           <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-black/50"></div>
