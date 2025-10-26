@@ -125,15 +125,15 @@ temp/
 *.tar.gz
 *.rar
 
-# Image files (if not needed in repo)
-*.jpg
-*.jpeg
-*.png
-*.gif
-*.bmp
-*.tiff
-*.svg
-*.ico
+# Image files (tracked in repo)
+# *.jpg
+# *.jpeg
+# *.png
+# *.gif
+# *.bmp
+# *.tiff
+# *.svg
+# *.ico
 
 # Document files
 *.pdf
@@ -144,16 +144,16 @@ temp/
 *.ppt
 *.pptx
 
-# Media files
-*.mp4
-*.avi
-*.mov
-*.wmv
-*.flv
-*.mp3
-*.wav
-*.flac
-*.aac
+# Media files (tracked in repo)
+# *.mp4
+# *.avi
+# *.mov
+# *.wmv
+# *.flv
+# *.mp3
+# *.wav
+# *.flac
+# *.aac
 
 # Database files
 *.db
@@ -434,16 +434,16 @@ temp/
 *.ppt
 *.pptx
 
-# Media files
-*.mp4
-*.avi
-*.mov
-*.wmv
-*.flv
-*.mp3
-*.wav
-*.flac
-*.aac
+# Media files (tracked in repo)
+# *.mp4
+# *.avi
+# *.mov
+# *.wmv
+# *.flv
+# *.mp3
+# *.wav
+# *.flac
+# *.aac
 
 # Database files
 *.db
