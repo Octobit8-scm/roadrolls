@@ -1361,42 +1361,12 @@ const Header = () => {
 
 // Hero Section Component
 const HeroSection = () => {
-  const [imageError, setImageError] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
+        {/* Background with sunlight effect */}
         <div className="absolute inset-0 z-0">
-          {/* Background Image using img tag for better reliability */}
-          {!imageError && (
-            <img 
-              src="./Home-hero-section.png"
-              alt="Hero background"
-              className="w-full h-full object-cover"
-              onLoad={() => {
-                console.log('Hero background image loaded successfully');
-                setImageLoaded(true);
-              }}
-              onError={(e) => {
-                console.log('Hero background image failed to load:', e);
-                console.log('Attempted to load:', e.target.src);
-                console.log('Falling back to external image...');
-                // Try external image as fallback
-                e.target.src = 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80';
-                e.target.onerror = () => {
-                  console.log('External image also failed, using gradient only');
-                  setImageError(true);
-                };
-              }}
-              style={{
-                minHeight: '100vh',
-                width: '100%',
-                objectFit: 'cover'
-              }}
-            />
-          )}
-          {/* Fallback gradient background */}
+          {/* Base gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900"></div>
           
           {/* Sunlight effect from top-right corner */}
