@@ -1374,8 +1374,6 @@ const HeroSection = () => {
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat'
             }}
-            onLoad={() => console.log('Hero background image loaded successfully')}
-            onError={() => console.log('Hero background image failed to load')}
           ></div>
           {/* Overlay for text readability */}
           <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-black/50"></div>
